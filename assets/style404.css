@@ -1,0 +1,311 @@
+/* ----- font ----- */
+@font-face {
+  font-family:Roboto;
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+  src:local(Roboto), local(Roboto-Regular), url(roboto-ext.woff2) format("woff2");
+  unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(Roboto), local(Roboto-Regular), url(roboto.woff2) format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+/* ----- body ----- */
+body, html {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  word-wrap: break-word;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  
+}
+/* ----- 404 glitch effect ----- */
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper h1.glitch {
+  color: white;
+  font-family: sans-serif;
+  font-weight: 800;
+  position: relative;
+  font-size: 80px;
+  padding: 30px;
+}
+.wrapper h1.glitch::before, .wrapper h1.glitch::after {
+  padding: 30px;
+  color: white;
+  content: "404";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  overflow: hidden;
+  top: 0;
+}
+.wrapper h1.glitch::before {
+  left: 3px;
+  text-shadow: -2px 0 red;
+  animation-name: glitch-animation-1;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse-alternate;
+}
+.wrapper h1.glitch::after {
+  left: -3px;
+  text-shadow: -2px 0 blue;
+  animation-name: glitch-animation-2;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse-alternate;
+}
+/* ----- glitch effect ----- */
+@keyframes glitch-animation-1 {
+  0% {
+    clip: rect(117px, 350px, 2px, 30px);
+  }
+  5% {
+    clip: rect(27px, 350px, 21px, 30px);
+  }
+  10% {
+    clip: rect(119px, 350px, 32px, 30px);
+  }
+  15% {
+    clip: rect(102px, 350px, 86px, 30px);
+  }
+  20% {
+    clip: rect(11px, 350px, 122px, 30px);
+  }
+  25% {
+    clip: rect(125px, 350px, 53px, 30px);
+  }
+  30% {
+    clip: rect(4px, 350px, 144px, 30px);
+  }
+  35% {
+    clip: rect(43px, 350px, 106px, 30px);
+  }
+  40% {
+    clip: rect(125px, 350px, 32px, 30px);
+  }
+  45% {
+    clip: rect(97px, 350px, 38px, 30px);
+  }
+  50% {
+    clip: rect(116px, 350px, 64px, 30px);
+  }
+  55% {
+    clip: rect(88px, 350px, 15px, 30px);
+  }
+  60% {
+    clip: rect(129px, 350px, 88px, 30px);
+  }
+  65% {
+    clip: rect(26px, 350px, 33px, 30px);
+  }
+  70% {
+    clip: rect(144px, 350px, 62px, 30px);
+  }
+  75% {
+    clip: rect(51px, 350px, 48px, 30px);
+  }
+  80% {
+    clip: rect(1px, 350px, 26px, 30px);
+  }
+  85% {
+    clip: rect(130px, 350px, 107px, 30px);
+  }
+  90% {
+    clip: rect(5px, 350px, 75px, 30px);
+  }
+  95% {
+    clip: rect(121px, 350px, 7px, 30px);
+  }
+  100% {
+    clip: rect(13px, 350px, 14px, 30px);
+  }
+}
+@keyframes glitch-animation-2 {
+  0% {
+    clip: rect(2px, 350px, 70px, 30px);
+  }
+  5% {
+    clip: rect(146px, 350px, 139px, 30px);
+  }
+  10% {
+    clip: rect(135px, 350px, 126px, 30px);
+  }
+  15% {
+    clip: rect(77px, 350px, 40px, 30px);
+  }
+  20% {
+    clip: rect(52px, 350px, 74px, 30px);
+  }
+  25% {
+    clip: rect(33px, 350px, 31px, 30px);
+  }
+  30% {
+    clip: rect(2px, 350px, 47px, 30px);
+  }
+  35% {
+    clip: rect(86px, 350px, 45px, 30px);
+  }
+  40% {
+    clip: rect(95px, 350px, 130px, 30px);
+  }
+  45% {
+    clip: rect(59px, 350px, 139px, 30px);
+  }
+  50% {
+    clip: rect(119px, 350px, 66px, 30px);
+  }
+  55% {
+    clip: rect(40px, 350px, 41px, 30px);
+  }
+  60% {
+    clip: rect(39px, 350px, 97px, 30px);
+  }
+  65% {
+    clip: rect(9px, 350px, 120px, 30px);
+  }
+  70% {
+    clip: rect(100px, 350px, 138px, 30px);
+  }
+  75% {
+    clip: rect(19px, 350px, 141px, 30px);
+  }
+  80% {
+    clip: rect(74px, 350px, 13px, 30px);
+  }
+  85% {
+    clip: rect(72px, 350px, 115px, 30px);
+  }
+  90% {
+    clip: rect(88px, 350px, 58px, 30px);
+  }
+  95% {
+    clip: rect(125px, 350px, 106px, 30px);
+  }
+  100% {
+    clip: rect(37px, 350px, 146px, 30px);
+  }
+}
+/* ----- napisy pod ERROR404 ----- */
+.tekst{
+  text-align: center;
+  position: relative;
+  
+  top: 280px;
+
+  color: rgb(12, 241, 43);
+}
+
+a{
+  text-decoration: none;
+  color: rgb(11, 240, 209);
+
+}
+/* -----  ----- */
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+/* ----- ERROR glitch effect ----- */
+.wrapper h2.glitch {
+  color: white;
+  font-family: sans-serif;
+  font-weight: 800;
+  position: relative;
+  font-size: 80px;
+  padding: 30px;
+}
+.wrapper h2.glitch::before, .wrapper h2.glitch::after {
+  padding: 30px;
+  color: white;
+  content: "Error";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  overflow: hidden;
+  top: 0;
+}
+.wrapper h2.glitch::before {
+  left: 3px;
+  text-shadow: -2px 0 red;
+  animation-name: glitch-animation-1;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse-alternate;
+}
+.wrapper h2.glitch::after {
+  left: -3px;
+  text-shadow: -2px 0 blue;
+  animation-name: glitch-animation-2;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse-alternate;
+}
+/* ----- ERROR404 animacja ----- */
+.error404{
+  position: relative;
+  animation-name: example;
+  animation-duration: 3s;  
+  animation-fill-mode: forwards;
+}
+@keyframes example {
+  from {top: 0px;}
+  to {top: 200px;}
+}
