@@ -17,7 +17,7 @@ function czas(){
     }
     if (distance < 0) {
         document.getElementById("czas").style.color = "red";
-        document.getElementById("czas").innerHTML = "EXPIRED";
+        document.getElementById("czas").innerHTML = "Nowy Rok!!";
       }
 setTimeout("czas()",1000);
 }
