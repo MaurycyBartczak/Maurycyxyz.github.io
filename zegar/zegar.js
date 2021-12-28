@@ -1,21 +1,21 @@
 function czas(){
     //DEC 31, 2021 00:00:00
-    var countDownDate = new Date("DEC 31, 2021 00:00:00").getTime();
+    var data = new Date("DEC 31, 2021 00:00:00").getTime();
     var now = new Date().getTime();
-    var distance = countDownDate - now;
-    var dzien = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var godziny = Math.floor((distance / (1000 * 60 * 60)) % 24);
-    var minuty = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var sekundy = Math.floor((distance % (1000 * 60)) / 1000);
+    var czas_do = data - now;
+    var dzien = Math.floor(czas_do / (1000 * 60 * 60 * 24));
+    var godziny = Math.floor((czas_do / (1000 * 60 * 60)) % 24);
+    var minuty = Math.floor((czas_do % (1000 * 60 * 60)) / (1000 * 60));
+    var sekundy = Math.floor((czas_do % (1000 * 60)) / 1000);
     var s2 = sekundy+1
     document.getElementById("czas").innerHTML = dzien+" dni "+godziny+" godziny "+minuty+" minuty "+s2+" sekundy";
-    if(distance<172800000){
+    if(czas_do<172800000){
         document.getElementById("czas").style.color = "orange";
     }
-    if (distance < 600000){
+    if (czas_do < 600000){
         document.getElementById("czas").style.color = "red";
     }
-    if (distance < 0) {
+    if (czas_do < 0) {
         document.getElementById("czas").style.color = "red";
         document.getElementById("czas").innerHTML = "Nowy Rok!!";
       }
