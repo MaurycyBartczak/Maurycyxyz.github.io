@@ -9,10 +9,10 @@ function czas(){
     var sekundy = Math.floor((czas_do % (1000 * 60)) / 1000);
     var s2 = sekundy+1
     document.getElementById("czas").innerHTML = dzien+" dni "+godziny+" godziny "+minuty+" minuty "+s2+" sekundy";
-    if(czas_do<172800000){
+    if(czas_do<172800000){ //48h
         document.getElementById("czas").style.color = "orange";
     }
-    if (czas_do < 600000){
+    if (czas_do < 1440000){ //24h
         document.getElementById("czas").style.color = "red";
     }
     if (czas_do < 0) {
