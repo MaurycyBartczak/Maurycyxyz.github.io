@@ -25,14 +25,29 @@ setTimeout("czas()",1000);
 czas();
 
 function teraz(){
-    var data1 = new Date();
-    var sekundy1 = data1.getSeconds();
-    var minuty1 = data1.getMinutes();
-    var godziny1 = data1.getHours();
-    var dzien1 = data1.getDate();
-    var miesiac1 = data1.getMonth()+1;
-    var rok1 = data1.getFullYear();
-    document.getElementById("teraz").innerHTML = rok1+"/"+miesiac1+"/"+dzien1+"/"+godziny1+":"+minuty1+":"+sekundy1;
+    var data = new Date();
+    var sec = data.getSeconds();
+    if(sec<10){
+        sec= "0"+sec;
+    }
+    var min = data.getMinutes();
+    if(min<10){
+        min="0"+min;
+    }
+    var h = data.getHours();
+    if(h<10){
+        h = "0"+h;
+    }
+    var day = data.getDate();
+    if(day<10){
+        day = "0"+day;
+    }
+    var msc = data.getMonth()+1;
+    if(msc<10){
+        msc = "0"+msc;
+    }
+    var rok1 = data.getFullYear();
+    document.getElementById("teraz").innerHTML = rok1+"/"+msc+"/"+day+"/"+h+":"+min+":"+sec;
     setTimeout("teraz()",1000);
   
 }
