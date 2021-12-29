@@ -34,6 +34,7 @@ function teraz(){
     var rok1 = data1.getFullYear();
     document.getElementById("teraz").innerHTML = rok1+"/"+miesiac1+"/"+dzien1+"/"+godziny1+":"+minuty1+":"+sekundy1;
     setTimeout("teraz()",1000);
+  
 }
 
 teraz()
