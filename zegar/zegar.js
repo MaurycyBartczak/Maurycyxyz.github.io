@@ -15,7 +15,7 @@ function czas(){
     if (czas_do < 1440000){ //24h
         document.getElementById("czas").style.color = "red";
     }
-    if (czas_do == 0) {
+    if (czas_do < 0) {
         document.getElementById("czas").style.color = "red";
         document.getElementById("czas").innerHTML = "Nowy Rok!!";
       }
