@@ -1,6 +1,6 @@
 function czas(){
     //DEC 31, 2021 00:00:00
-    var data = new Date("JAN 1, 2022 00:00:00").getTime();
+    var data = new Date("JUN 24, 2022 08:00:00").getTime();
     var now = new Date().getTime();
     var czas_do = data - now;
     var dzien = Math.floor(czas_do / (1000 * 60 * 60 * 24));
@@ -17,11 +17,19 @@ function czas(){
     }
     if (czas_do < 0) {
         document.getElementById("czas").style.color = "red";
-        document.getElementById("czas").innerHTML = "Nowy Rok!!";
+        document.getElementById("czas").innerHTML = "Wakacje!!";
       }
 setTimeout("czas()",1000);
 }
-
+// function czas2(){
+//     var data = new Date("JUN 24, 2022 08:00:00").getTime();
+//     var now = new Date().getTime();
+//     var czas_do = data - now;
+//     // console.log(czas_do)s
+//     document.getElementById("czas2").innerHTML = czas_do;
+//     setTimeout("czas2()",1);
+// }
+// czas2();
 czas();
 
 function teraz(){
