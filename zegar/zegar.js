@@ -21,16 +21,41 @@ function czas(){
       }
 setTimeout("czas()",1000);
 }
-// function czas2(){
-//     var data = new Date("JUN 24, 2022 08:00:00").getTime();
-//     var now = new Date().getTime();
-//     var czas_do = data - now;
-//     // console.log(czas_do)s
-//     document.getElementById("czas2").innerHTML = czas_do;
-//     setTimeout("czas2()",1);
-// }
-// czas2();
+
 czas();
+function kolor(){
+    var a = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
+    var c = Math.floor(Math.random() * 256);
+    if(a,b,c==0,0,0){
+        a = 0;
+        b = 60;
+        c = 0;
+    }
+    var color = `rgb(${a},${b},${c})`;
+    document.getElementById("rgb2").style.backgroundColor=color;
+    // document.getElementById("rgb1").style.backgroundColor=color;
+    // document.getElementById("rgb1").style.backgroundColor=color;
+    setTimeout("kolor()",500);
+}
+kolor();
+function kolor1(){
+    var a = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
+    var c = Math.floor(Math.random() * 256);
+    if(a,b,c==0,0,0){
+        a = 0;
+        b = 60;
+        c = 0;
+    }
+    var color = `rgb(${a},${b},${c})`;
+    
+    
+    document.getElementById("rgb1").style.backgroundColor=color;
+    setTimeout("kolor1()",500);
+}
+kolor1();
+
 
 function teraz(){
     var data = new Date();
@@ -62,4 +87,6 @@ function teraz(){
 }
 
 teraz()
+
+
 
