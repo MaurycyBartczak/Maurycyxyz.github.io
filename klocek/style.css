@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #101010;
+    animation: klocek_robi_kololki 10s linear infinite;
+}
+.klocek{
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+@keyframes klocek_robi_kololki{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.kololowy_klocek{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: aqua;
+    filter: drop-shadow(0 0 135px aqua);
+    /* border-radius: 50%; *//* albo kololowa kulka xd*/
+    
+}
+
